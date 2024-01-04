@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 
 class image_list extends StatefulWidget {
@@ -9,7 +11,7 @@ class image_list extends StatefulWidget {
 
 class _image_listState extends State<image_list> {
   int _imageIndex = 0;
-  List<String> _images = [
+  final List<String> _images = [
     'images/Nilou.full.3723537.jpg',
     'images/Navia.full.4030139.jpg',
     'images/Navia.full.4011277.jpg'
@@ -25,7 +27,7 @@ class _image_listState extends State<image_list> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Change App'),
+        title: const Text('Image Change App'),
       ),
       body: Center(
         child: Column(
@@ -37,10 +39,10 @@ class _image_listState extends State<image_list> {
               width: 1080,
               fit: BoxFit.fitHeight,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _changeImage,
-              child: Text('Change Image'),
+              child: const Text('Change Image'),
             ),
           ],
         ),
